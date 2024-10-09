@@ -1,0 +1,33 @@
+.partners-section {
+  background-color: #000;
+  color: #fff;
+  padding: 50px 20px;
+}
+
+.section-text {
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.partners-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-items: center;
+  align-items: center;
+}
+
+.partner-logo {
+  width: 150px;
+  height: auto;
+  object-fit: contain;
+}
+
+@media screen and (max-width: 768px) {
+  .partners-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
