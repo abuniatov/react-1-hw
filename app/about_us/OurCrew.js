@@ -12,7 +12,7 @@ const OurCrew = () => {
         <div className="crew-member">
           <img
             src="/crew/image-anousheh-ansari.png"
-            alt="Crew Member 1"
+            alt="photo of Sarah Vega"
             className="crew-photo"
           />
           <h4 className="crew-title">Captain Sarah Vega</h4>
@@ -26,7 +26,7 @@ const OurCrew = () => {
         <div className="crew-member">
           <img
             src="/crew/image-douglas-hurley.png"
-            alt="Crew Member 2"
+            alt="photo of Dr. Leo Redding"
             className="crew-photo"
           />
           <h4 className="crew-title">Chief astrophysicist Dr. Leo Redding</h4>
@@ -40,7 +40,7 @@ const OurCrew = () => {
         <div className="crew-member">
           <img
             src="/crew/image-victor-glover.png"
-            alt="Crew Member 3"
+            alt="photo of Hana Lee"
             className="crew-photo"
           />
           <h4 className="crew-title">Chief Engineer Hana Lee</h4>
@@ -55,7 +55,7 @@ const OurCrew = () => {
         <div className="crew-member">
           <img
             src="/crew/image-mark-shuttleworth.png"
-            alt="Crew Member 4"
+            alt="photo of Alex Santos"
             className="crew-photo"
           />
           <h4 className="crew-title">Mission Specialist Alex Santos</h4>
@@ -70,7 +70,7 @@ const OurCrew = () => {
         <div className="crew-member">
           <img
             src="/crew/image-anousheh-ansari.png"
-            alt="Crew Member 5"
+            alt="photo of Maya Patel"
             className="crew-photo"
           />
           <h4 className="crew-title">Crew Member Maya Patel</h4>
