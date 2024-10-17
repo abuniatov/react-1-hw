@@ -2,6 +2,7 @@
 
 import { usePathname } from "next/navigation";
 import styles from "./Footer.module.css";
+import Link from "next/link";
 
 export const Footer = () => {
   const path = usePathname().split("?")[0];
@@ -27,8 +28,24 @@ export const Footer = () => {
       </div> */}
       {/* Docs for the Link: https://nextjs.org/docs/pages/api-reference/components/link */}
 
-      {/* TASK - React 1 week 1 */}
-      {/* Add a new list item for LINKEDIN */}
+      <div className={styles.pages}>
+        <h3>Pages</h3>
+        <ul>
+          <li>
+            <Link href="/">Home</Link>
+          </li>
+          <li>
+            <Link href="/about_us">About us</Link>
+          </li>
+          <li>
+            <Link href="/destination">Destination</Link>
+          </li>
+          <li>
+            <Link href="/nasa_collaboration">Nasa Collaboration</Link>
+          </li>
+        </ul>
+      </div>
+
       <div className={styles.footerLinks}>
         <h3>Follow us</h3>
         <ul className={styles.footerList}>
