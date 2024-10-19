@@ -2,6 +2,7 @@
 
 import { usePathname } from "next/navigation";
 import styles from "./Footer.module.css";
+import { SocialMediaItem } from "./SocialMediaItem";
 import Link from "next/link";
 
 export const Footer = () => {
