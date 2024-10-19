@@ -5,6 +5,7 @@ import { useState } from "react";
 import styles from "@/components/destination/destination.module.css";
 import { PlanetWishlistItem } from "@/components/destination/PlanetWishlistItem";
 import { AddWishlistItem } from "@/components/destination/AddWishlistItem";
+import { PlanetCard } from "@/components/destination/PlanetCard";
 
 export const Destinations = () => {
   const [selectedPlanets, onAddPlanet] = useState([]);
@@ -89,41 +90,18 @@ export const Destinations = () => {
           <h2>Possible destinations</h2>
           {/* Create a <PlanetCard /> component, which accepts the following properties: */}
           {/* name, description, thumbnail, isSelected, onAddOrRemovePlanet */}
-
-          <div className={styles.planetCard}>
-            <img
-              className={styles.planetThumbnail}
-              src="/destination/image-europa.png"
-              alt=""
+          {planets.map((planet, index) => (
+            <PlanetCard
+              key={planet.name}
+              name={planet.name}
+              description={planet.description}
+              thumbnail={planet.thumbnail}
+              isSelected={selectedPlanets.includes(planet.name)}
+              onAddOrRemovePlanet={() =>
+                onAddOrRemovePlanet(planet.name, index)
+              }
             />
-            <div className={styles.planetDescription}>
-              <h2>EUROPA {isPlanetSelected ? "- SELECTED" : ""}</h2>
-              <p>Lorem ipsum...</p>
-            </div>
-            <button
-              className="roundButton"
-              onClick={() => onAddOrRemovePlanet("Pluto", 0)}
-            >
-              {isPlanetSelected ? "REMOVE" : "ADD PLANET"}
-            </button>
-          </div>
-          <div className={styles.planetCard}>
-            <img
-              className={styles.planetThumbnail}
-              src="/destination/image-europa.png"
-              alt=""
-            />
-            <div className={styles.planetDescription}>
-              <h2>EUROPA {isPlanetSelected ? "- SELECTED" : ""}</h2>
-              <p>Lorem ipsum...</p>
-            </div>
-            <button
-              className="roundButton"
-              onClick={() => onAddOrRemovePlanet("Pluto", 0)}
-            >
-              {isPlanetSelected ? "REMOVE" : "ADD PLANET"}
-            </button>
-          </div>
+          ))}
         </section>
       </main>
     </div>
