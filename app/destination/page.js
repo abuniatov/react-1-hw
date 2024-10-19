@@ -8,10 +8,9 @@ import { AddWishlistItem } from "@/components/destination/AddWishlistItem";
 import { PlanetCard } from "@/components/destination/PlanetCard";
 
 export const Destinations = () => {
-  const [selectedPlanets, onAddPlanet] = useState([]);
+  const [selectedPlanets, setSelectedPlanets] = useState([]);
 
-  let isPlanetSelected = false;
-  let numberOfPlanets = 0;
+  const numberOfPlanets = selectedPlanets.length;
 
   const planets = [
     {
@@ -40,14 +39,23 @@ export const Destinations = () => {
     },
   ];
 
+  // TASK - React 1 week 2
+  // Implement this function
+  // If you press the "ADD PLANET" the selected planet should display "SELECTED"
+  // And the counter should update, how many planets are selected (numberOfPlanets)
   const onAddOrRemovePlanet = (name, index) => {
-    // TASK - React 1 week 2
-    // Implement this function
-    // If you press the "ADD PLANET" the selected planet should display "SELECTED"
-    // And the counter should update, how many planets are selected (numberOfPlanets)
-    console.log(
-      `You seleceted the following planet: ${name}, with the index of ${index}`
-    );
+    setSelectedPlanets((prevSelectedPlanets) => {
+      const updatedSet = new Set(prevSelectedPlanets);
+      if (updatedSet.has(name)) {
+        updatedSet.delete(name);
+      } else {
+        updatedSet.add(name);
+      }
+      console.log(
+        `You selected the following planet: ${name}, with the index of ${index}`
+      );
+      return Array.from(updatedSet);
+    });
   };
 
   return (
