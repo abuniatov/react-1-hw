@@ -67,8 +67,14 @@ export const Destinations = () => {
           {/* TASK - React 1 week 2 */}
           {/* Display the number Of selected planets */}
           {/* Display the "no planets" message if it is empty! */}
-          <p>No planets in wishlist :(</p>
-          <p>You have {numberOfPlanets} in your wishlist</p>
+          {numberOfPlanets === 0 ? (
+            <p>No planets in wishlist :(</p>
+          ) : (
+            <p>
+              You have {numberOfPlanets}{" "}
+              {numberOfPlanets === 1 ? "planet" : "planets"} in your wishlist
+            </p>
+          )}
           <b>List coming soon after lesson 3!</b>
 
           {/* STOP! - this is for week 3!*/}
