@@ -5,7 +5,7 @@ import { useState } from "react";
 import styles from "@/components/destination/destination.module.css";
 import { PlanetWishlistItem } from "@/components/destination/PlanetWishlistItem";
 import { AddWishlistItem } from "@/components/destination/AddWishlistItem";
-import { PlanetCard } from "@/components/destination/PlanetCard";
+import PlanetCard from "@/components/destination/PlanetCard";
 
 export const Destinations = () => {
   const [selectedPlanets, setSelectedPlanets] = useState([]);
