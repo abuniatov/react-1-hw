@@ -4,7 +4,7 @@ import { useState } from "react";
 
 import styles from "@/components/destination/destination.module.css";
 import { PlanetWishlistItem } from "@/components/destination/PlanetWishlistItem";
-import { AddWishlistItem } from "@/components/destination/AddWishlistItem";
+import AddWishlistItem from "@/components/destination/AddWishlistItem";
 import PlanetCard from "@/components/destination/PlanetCard";
 
 export const Destinations = () => {
@@ -80,12 +80,12 @@ export const Destinations = () => {
           {/* STOP! - this is for week 3!*/}
           {/* TASK - React 1 week 3 */}
           {/* Import the AddWishlistItem react component */}
-          {/* <AddWishlistItem /> */}
+          <AddWishlistItem />
           {/* TASK - React 1 week 3 */}
           {/* Convert the list, so it is using selectedPlanets.map() to display the items  */}
           {/* Implement the "REMOVE" function */}
           {/* uncomment the following code snippet: */}
-          {/* 
+          
           <h3>Your current wishlist</h3>
           <div className={styles.wishlistList}>
             <PlanetWishlistItem 
@@ -98,7 +98,7 @@ export const Destinations = () => {
               onRemove={() => removeFromWishlist('europa')}
               thumbnail="/destination/image-europa.png"
             />
-          </div> */}
+          </div>
         </section>
         <section className="card">
           <h2>Possible destinations</h2>
