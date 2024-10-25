@@ -11,10 +11,10 @@
 .crew-member {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* Ensures content starts from the top */
+  justify-content: flex-start;
   align-items: center;
   text-align: center;
-  height: 100%; /* Make each grid item take the full height */
+  height: 100%;
 }
 
 .crew-photo {
@@ -35,7 +35,7 @@
   font-size: 1rem;
   line-height: 1.6;
   color: #ccc;
-  flex-grow: 1; /* Ensures the description area expands to fill the remaining space */
+  flex-grow: 1;
 }
 
 @media screen and (max-width: 768px) {
