@@ -3,23 +3,16 @@
 import { useState } from "react";
 import styles from "./destination.module.css";
 
-export const AddWishlistItem = ({ onAddWishlistItem }) => {
+const AddWishlistItem = ({ onAddWishlistItem }) => {
   const [thumbnail, setThumbnail] = useState("/destination/image-europa.png");
-  // TASK - React 1 week 3
-  // 1. Add a useState for the handling the <input id="customWishlist" type="text" />
-  // 2. Connect the onThumbnailChange to the <select>
+
   const [wishlistItem, setWishlistItem] = useState("");
 
   const onAddItemPressed = () => {
-    // TASK - React 1 week 3
-    // implement this function
-    // Clear the <input/> field on button press
-    // pass the thumbnail and the name from the input to the onAddWishlistItem function
-    // call the onAddWishlistItem here
+
     if (wishlistItem.trim() === "") return;
 
     onAddWishlistItem(wishlistItem, thumbnail);
-
     setWishlistItem("");
   };
 
@@ -48,3 +41,5 @@ export const AddWishlistItem = ({ onAddWishlistItem }) => {
     </div>
   );
 };
+
+export default AddWishlistItem;
