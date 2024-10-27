@@ -2,11 +2,65 @@
   background-color: black;
   width: 100vw;
   height: 100vh;
+  color: white;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
+.fullBGpicture {
+  background-color: black;
+  padding: 20px;
+  min-height: 100vh;
+}
 
-.nasaPicOfTheDayImg {
-  width: auto;
-  height: 400px;
+.mainContent {
+  width: 80%;
+  max-width: 1200px;
+  margin: auto;
+}
 
+.card {
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.collaborationItem {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.collaborationTitle {
+  color: #ffffff;
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.collaborationText {
+  color: #ddd;
+  font-size: 1rem;
+}
+
+.roverPhotoContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.nasaPicOfTheDayImg img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.roverText {
+  color: #ccc;
+  font-size: 0.9rem;
+  margin-top: 5px;
+  text-align: center;
 }
