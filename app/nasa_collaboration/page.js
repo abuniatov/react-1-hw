@@ -34,11 +34,12 @@ export const NasaCollaboration = () => {
 
     const fetchData = async () => {
       try {
-        const dailyImgResponse = await fetch(NASA_URLs.astronomyPicOfTheDay);
-        const dailyImg = await dailyImgResponse.json();
-        setDailyImg(dailyImg);
+      const dailyImgResponse = await fetch(NASA_URLs.astronomyPicOfTheDay);
+      const dailyImg = await dailyImgResponse.json();
+      setDailyImg(dailyImg);
       } catch (error) {
-        console.error("Error fetching astronomy picture of the day:", error);
+      console.error("Error fetching astronomy picture of the day:", error);
+      alert("An error occurred while fetching the astronomy picture of the day.");
       }
     };
 
